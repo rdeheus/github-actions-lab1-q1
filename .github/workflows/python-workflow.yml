@@ -8,6 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: checkout
+      uses: actions/checkout@v4
+      with:
+        repository: "rdeheus/github-actions-lab1-q1"
+        token: {{ secrets.GH_TOKEN }}
     - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
